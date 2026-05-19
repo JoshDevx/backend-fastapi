@@ -28,3 +28,10 @@
 - si usamos ssin el dev igual se puede, pero es mas usado para produccion
 
 
+# Parametros de ruta
+- Son parametros de peticion que se han adjuntado a la URL
+- Forma de encontrar informacion basada en la ubicacion
+
+# Parametros de consulta
+- son parametros de peticion que se han adjuntado despues de un signo de interrogacion
+- tienen una relacion de par name=value
