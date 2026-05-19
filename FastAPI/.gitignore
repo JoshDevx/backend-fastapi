@@ -2,10 +2,9 @@
 venv/
 env/
 .venv/
+fastapienv/
+FastAPI/fastapienv/
 
 # Archivos compilados de Python
 __pycache__/
 *.pyc
-
-# Variables de entorno (contraseñas, api keys)
-.env
