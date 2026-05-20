@@ -35,3 +35,8 @@
 # Parametros de consulta
 - son parametros de peticion que se han adjuntado despues de un signo de interrogacion
 - tienen una relacion de par name=value
+
+# Metodo POST
+- CREAR DATOS
+![alt text](image.png)
+
