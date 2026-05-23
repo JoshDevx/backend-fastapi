@@ -40,3 +40,10 @@
 - CREAR DATOS
 ![alt text](image.png)
 
+# Metodo PUT
+- Actualizar datos
+
+# Metodo DELETE
+- Se usa para borrar datos
+
+

@@ -37,6 +37,14 @@ Manera mas larga de hacerlo
             books_to_return.append(book)
     return books_to_return
 '''
+@app.get("/book/")
+async def read_author(author: str):
+    return [ book for book in BOOKS if book.get("autor").casefold() == author.casefold()]
+
+
+@app.get("/book/byauthor/{autor}")
+async def buscar_autor(autor: str):
+    return [ book for book in BOOKS if book.get("autor").casefold() == autor.casefold()]
 
 # Parametro de ruta y de consulta
 @app.get("/books/{author}/")
@@ -51,3 +59,16 @@ async def read_author_category_by_query(author: str, category: str):
 async def create_book(new_book = Body() ):
     BOOKS.append(new_book)
 
+@app.put("/books/update_book")
+async def update_book(update_book = Body()):
+    for i in range(len(BOOKS)):
+        if BOOKS[i].get("titulo").casefold() == update_book.get("titulo").casefold():
+            BOOKS[i] = update_book
+
+
+@app.delete("/books/delete_book/{title_book}")
+async def delete_book(title_book: str):
+    for i in range(len(BOOKS)):
+        if BOOKS[i].get("titulo").casefold() == title_book.casefold():
+            BOOKS.pop(i)
+            break
